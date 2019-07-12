@@ -1,0 +1,15 @@
+<li [ngClass]="itemClasses">
+  <button
+    class="w3-button w3-white w3-border"
+    (click)="fireCompleteTodo()"
+    [disabled]="todoItem.completed"
+  >
+    &#10004;
+  </button>
+  {{ todoItem.title }}
+  <span
+    class="w3-button w3-display-right w3-red w3-margin-right"
+    (click)="fireDeleteTodo()"
+    >&times;</span
+  >
+</li>

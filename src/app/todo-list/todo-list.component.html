@@ -1,0 +1,24 @@
+<div class="w3-container w3-padding" style="max-width:980px;margin:0 auto">
+  <app-todo-form (addTodo)="addTodo($event)"></app-todo-form>
+
+  <ul class="w3-ul w3-border w3-card-2 ">
+    <li class="w3-row">
+      <div class="w3-half">
+        <h5>Total: {{ todos.length }}</h5>
+      </div>
+      <div class="w3-half">
+        <h5>Completed: {{ getCompleted() }}</h5>
+      </div>
+    </li>
+    <li class="w3-display-container" *ngFor="let todo of todos">
+      <app-todo-item
+        (completeTodo)="completeTodo($event)"
+        (deleteTodo)="deleteTodo($event)"
+        [todoItem]="todo"
+      ></app-todo-item>
+    </li>
+  </ul>
+  <p class="w3-container w3-center">
+    Created by <a href="http://mohsina.li">Mohsin Ali</a>
+  </p>
+</div>

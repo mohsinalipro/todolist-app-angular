@@ -1,0 +1,16 @@
+<form
+  class="w3-row-padding w3-margin-bottom w3-margin-top w3-card-2 w3-padding"
+  (submit)="fireAddTodo($event, todoInput.value)"
+>
+  <div class="w3-threequarter">
+    <input
+      class="w3-input w3-border"
+      type="text"
+      placeholder="Todo"
+      #todoInput
+    />
+  </div>
+  <div class="w3-rest">
+    <button class="w3-button w3-block w3-border w3-blue">Add</button>
+  </div>
+</form>
